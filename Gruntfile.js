@@ -356,8 +356,8 @@ module.exports = function (grunt) {
         server: 'ftlnx109-lviw-uk-p.osb.ft.com',
         targetRoot: '/var/opt/customer/apps/interactive.ftdata.co.uk/var/www/html',
         targets: {
-          demo: '_other/callum/seasonal-video/demo',
-          live: '_other/callum/seasonal-video/live'
+          demo: '_other/callum/igv/demo',
+          live: '_other/callum/igv/live'
         }
       }
     },
