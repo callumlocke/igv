@@ -63,13 +63,14 @@ $play-circle-border-width: 2px;
 }
 
   .igv__play-button__circle {
-    background-color: rgba(0,0,0,0.2);
+    background-color: rgba(0,0,0,0.5);
     width: $play-icon-width * 2.5 - $play-circle-border-width;
     height: $play-icon-width * 2.5 - $play-circle-border-width;
     border: $play-circle-border-width solid white;
     border-color: rgba(255,255,255,$white-opacity);
     border-radius: $play-icon-width * 3;
     position: absolute;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   }
 
   .igv__play-button__icon {
@@ -110,6 +111,7 @@ $play-circle-border-width: 2px;
 
     &::after {
       content: 'PLAY VIDEO';
+      text-shadow: 0 2px 0 rgba(0, 0, 0, 0.5);
     }
 
     .igv--paused:hover & {
