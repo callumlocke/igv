@@ -90,7 +90,23 @@
         this.videoEnabled = true;
 
         // Create the <video> and <source> elements
-        this.$video = $('<video>');
+        this.$video = $('<video>')
+          .on({
+            playing: function () {
+              v.$cont
+                .addClass('igv--playing')
+                .removeClass('igv--paused');
+              v.playing = true;
+            },
+            pause: function () {
+              v.playing = false;
+              v.$cont
+                .removeClass('igv--playing')
+                .addClass('igv--paused');
+            }
+          })
+        ;
+
         var src = options.baseURL + options.name + '.',
             types = options.sourceTypes;
         for (var i = 0; i < types.length; i++) {
@@ -153,20 +169,12 @@
 
     Video.prototype.play = function () {
       if (this.videoEnabled && !this.playing) {
-        this.playing = true;
-        this.$cont
-          .addClass('igv--playing')
-          .removeClass('igv--paused');
         this.$video[0].play();
       }
     };
 
     Video.prototype.pause = function () {
       if (this.videoEnabled && this.playing) {
-        this.playing = false;
-        this.$cont
-          .removeClass('igv--playing')
-          .addClass('igv--paused');
         this.$video[0].pause();
       }
     };
