@@ -253,10 +253,10 @@
               if (IGV.debug)
                 updateDebugInfo();
             }, 50));
-
-            if (isFunction(callback))
-              callback();
           }
+
+          if (isFunction(callback))
+            callback();
         });
       },
 
