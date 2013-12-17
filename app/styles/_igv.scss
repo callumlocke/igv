@@ -100,7 +100,7 @@ $play-circle-border-width: 2px;
   .igv__play-button__text {
     color: white;
     color: rgba(255,255,255,$white-opacity);
-    font: 14px $benton;
+    font: 14px sans-serif;
     line-height: ($play-icon-width * 2.5);
     position: relative;
     left: $play-icon-width * 3.2;
