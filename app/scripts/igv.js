@@ -63,11 +63,6 @@
       this.$cont = $(options.containerEl);
       this.playButton = this.$cont.is('[data-igv-playbutton]');
 
-      // Prepare container div
-      this.$cont.empty().addClass('igv igv--paused');
-      if (IGV.debug)
-        this.$cont.addClass('igv--debug');
-
       // Set the element whose scroll position to track
       if (this.options.looper && !this.options.scrollElement)
         this.options.scrollElement = options.containerEl;
@@ -87,6 +82,11 @@
 
       // Set up video if necessary
       if (!this.options.looper || IGV.enableLoopingVideos) {
+        // Prepare container div
+        this.$cont.empty().addClass('igv igv--paused');
+        if (IGV.debug)
+          this.$cont.addClass('igv--debug');
+
         this.videoEnabled = true;
 
         // Create the <video> and <source> elements
