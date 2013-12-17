@@ -10,7 +10,7 @@
     IGV.debug = true;
 
   var defaults = {
-    baseURL: '//interactivegraphics.ft-static.com/sites/2013/seasonal-appeal/videos/'
+    baseURL: '//interactivegraphics.ft-static.com/sites/2013/seasonal-appeal-draft1/videos/'
   };
 
   IGV.run(defaults, function () {
