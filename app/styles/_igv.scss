@@ -1,0 +1,120 @@
+.igv {
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+
+  &> video {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0;
+  }
+
+  // Paused state
+  &.igv--playing {
+    &> .igv__play-button {
+      visibility: hidden;
+    }
+  }
+
+  // DEBUG
+  &.igv--debug {
+    background-color: red;
+    outline: 1px solid blue;
+
+    &> video {
+      opacity: 0.5;
+    }
+    &.igv--playing > video {
+      opacity: 1;
+    }
+  }
+
+  // &.igv--paused
+
+}
+
+#igv-debug-info {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 300px;
+  height: auto;
+  background-color: rgba(0,0,255,0.5);
+  color: white;
+  font: bold 10px verdana;
+  z-index: 999;
+}
+
+
+// Silly play button CSS
+$play-icon-width: 18px;
+$white-opacity: 0.8;
+$play-circle-border-width: 2px;
+.igv__play-button {
+  position: absolute;
+  bottom: 60px;
+  left: 20px;
+  width: 150px;
+  // cursor: pointer;
+  // outline: 1px solid blue;
+}
+
+  .igv__play-button__circle {
+    background-color: rgba(0,0,0,0.2);
+    width: $play-icon-width * 2.5 - $play-circle-border-width;
+    height: $play-icon-width * 2.5 - $play-circle-border-width;
+    border: $play-circle-border-width solid white;
+    border-color: rgba(255,255,255,$white-opacity);
+    border-radius: $play-icon-width * 3;
+    position: absolute;
+  }
+
+  .igv__play-button__icon {
+    position: absolute;
+    left: $play-icon-width - ($play-icon-width / (3 + (1/3)));
+    top: $play-icon-width - ($play-icon-width / (3 + (1/3)));
+  }
+
+    .igv__play-button__triangle {
+      border-style: dashed; // trick for IE
+      border-color: transparent;
+      border-width: 0.53em;
+      display: -moz-inline-box;
+      display: inline-block;
+      font-size: $play-icon-width;
+      height: 0;
+      line-height: 0;
+      position: relative;
+      vertical-align: middle;
+      width: 0;
+      border-left-width: 1em;
+      border-left-style: solid;
+      border-left-color: white;
+      border-left-color: rgba(255,255,255,$white-opacity);
+      left: 0.25em;
+    }
+
+  .igv__play-button__text {
+    color: white;
+    color: rgba(255,255,255,$white-opacity);
+    font: 14px $benton;
+    line-height: ($play-icon-width * 2.5);
+    position: relative;
+    left: $play-icon-width * 3.2;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.25s linear;
+
+    &::after {
+      content: 'PLAY VIDEO';
+    }
+
+    .igv--paused:hover & {
+      visibility: visible;
+      opacity: 1;
+      color: white;
+    }
+  }

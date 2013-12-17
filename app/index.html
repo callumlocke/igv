@@ -1,0 +1,60 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="m ft-iframedgraphic-module no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="m ft-iframedgraphic-module no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="m ft-iframedgraphic-module no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="m ft-interactive-module no-js"> <!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>IGV Demo Page</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<!--#include virtual="/inc/extras-head-1.html" -->
+<!-- build:css({.tmp,app}) styles/main.css -->
+<link rel="stylesheet" href="styles/main.css">
+<!-- endbuild -->
+<!-- build:js({.tmp,app}) scripts/vendor/top.js -->
+<script src="scripts/vendor/modernizr.js"></script>
+<!-- endbuild -->
+<!--#include virtual="/inc/extras-head-2.html" -->
+</head>
+<body>
+<!--#include virtual="/inc/fallback.html" -->
+
+<div class="outer-container">
+  <div id="main-content" role="main">
+
+    <nav>
+      Debug mode <a href="?debug">On</a> <a href="?">Off</a>
+    </nav>
+
+    <!-- Looping examples -->
+    <div class="first-video">
+      <div data-igv="pagoda" data-igv-loop>Fallback content for PAGODA video</div>
+    </div>
+    <div class="second-video">
+      <div data-igv="hospital" data-igv-loop>Fallback content for HOSPITAL video</div>
+    </div>
+
+    <!-- Looper with custom scrollelement (video is fixed pos) -->
+    <div class="third-video scrolly-class">
+      <div data-igv="dailiy" data-igv-loop data-igv-scrollelement=".scrolly-class">Fallback content for DAILIY video</div>
+    </div>
+
+    <!-- Non-looping video with play button -->
+    <div class="fourth-video">
+      <div data-igv="poem" data-igv-playbutton data-igv-subtitles>Fallback content for POEM video</div>
+    </div>
+
+  </div>
+</div>
+
+<!--#include virtual="/inc/extras-foot-1.html" -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<!-- build:js({.tmp,app}) scripts/main.js -->
+<script src="bower_components/Captionator/js/captionator.js"></script>
+<script src="scripts/igv.js"></script>
+<script src="scripts/main.js"></script>
+<!-- endbuild -->
+<!--#include virtual="/inc/extras-foot-2.html" -->
+</body>
+</html>

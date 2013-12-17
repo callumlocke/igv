@@ -1,0 +1,9 @@
+{
+  "name": "exp2",
+  "version": "0.0.0",
+  "dependencies": {
+    "minimal": "https://github.com/ft-interactive/minimal.git#master",
+    "Captionator": "https://github.com/cgiffard/Captionator.git"
+  },
+  "devDependencies": {}
+}

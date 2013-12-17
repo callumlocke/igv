@@ -1,0 +1,39 @@
+@import "var";
+@import "minimal/minimal";
+@import "igv";
+
+html, body {
+  margin: 20px;
+}
+
+nav {
+  margin: 20px 0;
+}
+
+.first-video,
+.second-video,
+.third-video,
+.fourth-video {
+  position: relative;
+  width: 600px;
+  height: 600px / (16/9);
+  margin-bottom: 60px;
+
+  background-color: green;
+}
+
+
+// Fix the 3rd video in position, to demonstrate having a custom scroll element
+.third-video > div {
+  width: 300px;
+  height: 200px;
+
+  position: fixed;
+  top: 150px;
+  right: 10px;
+}
+
+
+.fourth-video {
+  cursor: pointer;
+}

@@ -1,0 +1,22 @@
+{
+  "tests": [
+
+  ],
+  "extra": {
+    "shiv": true,
+    "printshiv": false,
+    "load": false,
+    "mq": false,
+    "cssclasses": true
+  },
+  "extensibility" : {
+    "addtest" : false,
+    "prefixed" : false,
+    "teststyles" : false,
+    "testprops" : false,
+    "testallprops" : false,
+    "hasevents" : false,
+    "prefixes" : false,
+    "domprefixes" : false
+  }
+}
