@@ -127,14 +127,14 @@
         this.$cont.addClass('igv--video-enabled').append(this.$video);
 
         // Set up subtitles
-        if (this.$cont.is('[data-igv-subtitles]')) {
-          this.$video.append('<track kind="subtitles" src="' /*+ this.options.baseURL*/ + this.name + '.vtt" srclang="en" label="English Subtitles" default>');
-          // console.log('YYY', this.$cont.children('track')[0]);
+        // if (this.$cont.is('[data-igv-subtitles]')) {
+        //   this.$video.append('<track kind="subtitles" src="' /*+ this.options.baseURL*/ + this.name + '.vtt" srclang="en" label="English Subtitles" default>');
+        //   // console.log('YYY', this.$cont.children('track')[0]);
 
-          captionator.captionify(this.$video[0]);
-          // console.log(this.$video[0]);
-          // this.$video[0].tracks[0].mode = captionator.TextTrack.SHOWING;
-        }
+        //   captionator.captionify(this.$video[0]);
+        //   // console.log(this.$video[0]);
+        //   // this.$video[0].tracks[0].mode = captionator.TextTrack.SHOWING;
+        // }
       }
     }
 
