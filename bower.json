@@ -2,7 +2,6 @@
   "name": "exp2",
   "version": "0.0.0",
   "dependencies": {
-    "Captionator": "git+https://github.com/cgiffard/Captionator.git#master"
   },
   "devDependencies": {}
 }
