@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "dependencies": {
     "minimal": "git+https://github.com/ft-interactive/minimal.git#master",
-    "Captionator": "git+https://github.com/cgiffard/Captionator.git"
+    "Captionator": "git+https://github.com/cgiffard/Captionator.git#master"
   },
   "devDependencies": {}
 }
